@@ -5,7 +5,7 @@ ENV COVERALLS_TOKEN [secure]
 ENV CC gcc
 ENV CXX g++
 WORKDIR /opt/snort_src
-apt-get update && apt upgrade -y ;\
+RUN apt-get update && apt upgrade -y ;\
 apt-get install cron net-tools ethtool inetutils-ping git wget build-essential libpcap-dev libpcre3-dev libdumbnet-dev bison flex zlib1g-dev liblzma-dev openssl libssl-dev libnghttp2-dev  python-pip supervisor libmysqlclient-dev mysql-client autoconf libtool libcrypt-ssleay-perl liblwp-useragent-determined-perl -y ;\
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ;\
 wget https://github.com/firnsy/barnyard2/archive/master.tar.gz -O barnyard2-Master.tar.gz ;\
