@@ -20,7 +20,7 @@ mkdir /var/log/barnyard2 ;\
 chown snort.snort /var/log/barnyard2 ;\
 touch /var/log/snort/barnyard2.waldo ;\
 chown snort.snort /var/log/snort/barnyard2.waldo ;\
-chmod o-r /etc/snort/barnyard2.conf ;\
+chmod o-r /etc/snort/barnyard2.conf
 ADD superv.conf /etc/supervisor/conf.d/
 ADD barnyard.sh /opt/
 RUN chmod +x /opt/barnyard.sh
